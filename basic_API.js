@@ -1,7 +1,13 @@
 fetch('https://reqres.in/api/users')
 
-    //this return the detail data of response from server
-    .then(res => res.json())
+    //Display Message whether the connection success or not.
+    .then(res => {
+        if(res.ok) {
+            console.log('SUCCESS')
+        } else {
+            console.log("Not Successful")
+        }
+    })
     .then(data => console.log(data)) 
 
     
